@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'rem hahaha'
+                bat '''
+                    rem hahaha
+              	'''
             }
         }
     }
