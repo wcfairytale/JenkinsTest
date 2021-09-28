@@ -10,6 +10,8 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            archiveArtifacts artifacts: 'build/libs/xixixi.jar', fingerprint: true
+            junit 'build/reports/xixixi.xml'
         }
         success {
             echo 'This will run only if successful'
