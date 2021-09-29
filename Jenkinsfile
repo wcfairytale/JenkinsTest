@@ -10,7 +10,7 @@ pipeline {
     post {
         always {
             echo 'This will always run'
-            archiveArtifacts artifacts: 'build/archive.jar', fingerprint: true
+            archiveArtifacts artifacts: 'build/**', fingerprint: true
         }
         success {
             echo 'This will run only if successful'
